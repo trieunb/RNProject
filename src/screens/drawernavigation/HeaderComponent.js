@@ -21,12 +21,12 @@ class HeaderComponent extends Component {
             <Header>
                 <Left>
                   <TouchableHighlight
-                      onPress={() => this.props.drawerOpen()}
-                      // onPress={() => {
-                      //   // this.props.navigation('DrawerOpen')
-                      //   const { navigate } = this.props.navigation
-                      //   navigate('DrawerOpen')
-                      // }}
+                      // onPress={() => this.props.drawerOpen()}
+                      onPress={() => {
+                        this.props.navigation('DrawerOpen')
+                        // const { navigate } = this.props.navigation
+                        // navigate('DrawerOpen')
+                      }}
                       // onPress={() => console.log(this.props)}
                     >
                     <Icon name="ios-menu"
