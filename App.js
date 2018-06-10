@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 import { Container, Content, Icon, Header, Body } from 'native-base'
-import { DrawerNavigator, StackNavigator, DrawerItems, SafeAreaView } from 'react-navigation'
+import { createDrawerNavigator, StackNavigator, DrawerItems, SafeAreaView } from 'react-navigation'
 
 // import Main from './src/screens/Main';
 // const Navigator = createStackNavigator({
@@ -107,7 +107,7 @@ const CustomDrawerContentComponent = (props) => (
   </Container>
 );
 
-const MyApp = DrawerNavigator({
+const MyApp = createDrawerNavigator({
   // For each screen that you can navigate to, create a new entry like this:
     Home: {
       screen: HomeComponent,
@@ -119,7 +119,7 @@ const MyApp = DrawerNavigator({
     {
       initialRouteName: 'Home',
       drawerPosition: 'left',
-      // contentComponent: CustomDrawerContentComponent,
+      contentComponent: CustomDrawerContentComponent,
       drawerOpenRoute: 'DrawerOpen',
       drawerCloseRoute: 'DrawerClose',
       drawerToggleRoute: 'DrawerToggle'

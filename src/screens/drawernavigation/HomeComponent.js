@@ -32,6 +32,7 @@ class HomeComponent extends Component {
       <Container>
 
         <HeaderComponent title="Home" drawerOpen={() => this.props.navigation.navigate('DrawerOpen')} />
+        {/* <HeaderComponent title="Home" navigate={this.props.navigation.navigate} /> */}
         {/* <HeaderComponent {..this.props} /> */}
 
         <Content
