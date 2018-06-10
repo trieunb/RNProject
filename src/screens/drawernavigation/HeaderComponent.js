@@ -1,0 +1,42 @@
+/*
+author  :   Trieunb
+created :   2018-06-09
+description: Main Component
+*/
+/*============================================================================*/
+//import library
+import React, { Component } from "react";
+import {
+    View,
+    Text,
+    StyleSheet,
+    TouchableHighlight
+} from "react-native";
+
+import { Header, Body, Title, Content, Left, Icon, Right } from 'native-base'
+
+class HeaderComponent extends Component {
+    render() {
+        return (
+            <Header>
+                <Left>
+                  <TouchableHighlight
+                      // onPress={() => this.props.drawerOpen()}
+                      onPress={() => console.log(this.props.drawerOpen)}
+                    >
+                    <Icon name="ios-menu"
+                      // onPress={() => this.props.drawerOpen()}
+                      // onPress={() => console.log(this.props.drawerOpen)}
+                    />
+                  </TouchableHighlight>
+
+                </Left>
+                <Body>
+                    <Title>{this.props.title}</Title>
+                </Body>
+                <Right />
+            </Header>
+        );
+    }
+}
+export default HeaderComponent;
