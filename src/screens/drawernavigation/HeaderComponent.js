@@ -10,7 +10,8 @@ import {
     View,
     Text,
     StyleSheet,
-    TouchableHighlight
+    TouchableHighlight,
+    TouchableOpacity
 } from "react-native";
 
 import { Header, Body, Title, Content, Left, Icon, Right } from 'native-base'
@@ -21,12 +22,12 @@ class HeaderComponent extends Component {
             <Header>
                 <Left>
                   <TouchableHighlight
-                      // onPress={() => this.props.drawerOpen()}
-                      onPress={() => {
-                        this.props.navigation('DrawerOpen')
-                        // const { navigate } = this.props.navigation
-                        // navigate('DrawerOpen')
-                      }}
+                      onPress={() => this.props.drawerOpen()}
+                      // onPress={() => {
+                      //   this.props.navigation('DrawerOpen')
+                      //   // const { navigate } = this.props.navigation
+                      //   // navigate('DrawerOpen')
+                      // }}
                       // onPress={() => console.log(this.props)}
                     >
                     <Icon name="ios-menu"
@@ -39,7 +40,7 @@ class HeaderComponent extends Component {
                 <Body>
                     <Title>{this.props.title}</Title>
                 </Body>
-                <Right />
+                {/* <Right /> */}
             </Header>
         );
     }

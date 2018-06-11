@@ -31,9 +31,9 @@ class HomeComponent extends Component {
 
       <Container>
 
-        {/* <HeaderComponent title="Home" drawerOpen={() => this.props.navigation.navigate('DrawerOpen')} /> */}
+        <HeaderComponent title="Home" drawerOpen={() => this.props.navigation.navigate('DrawerOpen')} />
         {/* <HeaderComponent title="Home" navigate={this.props.navigation.navigate} /> */}
-        <HeaderComponent {..this.props} />
+        {/* <HeaderComponent {..this.props} /> */}
 
         <Content
           contentContainerStyle={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 10 }}>

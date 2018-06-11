@@ -19,7 +19,8 @@ export default class MainComponent extends Component{
       headerRight: (
         <Button onPress={params.increaseCount} title="+1" color="#fff" />
       ),
-      headerBackTitle: 'Home'
+      headerBackTitle: 'Home',
+      header: () => null
     };
   };
   componentWillMount() {

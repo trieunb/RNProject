@@ -4,7 +4,36 @@ created :   2018-06-09
 description : HomeTab
 */
 import React, { Component } from 'react';
-import { Container, Text, Content, Icon } from 'native-base';
+
+import { Container, Content, Icon, Header, Body, Text } from 'native-base'
+import { createDrawerNavigator, StackNavigator, createStackNavigator, DrawerItems, SafeAreaView } from 'react-navigation';
+
+
+import MainComponent from '../components/MainComponent';
+import DetailComponent from '../components/DetailComponent';
+import ThirdComponent from '../components/ThirdComponent';
+
+import { ScreenMain, ScreenDetail, ScreenThird } from '../../../ScreenNames';
+
+const Navigator = createStackNavigator({
+  ScreenMain: {
+    screen: MainComponent
+  },
+  ScreenDetail: {
+    screen: DetailComponent,
+  },
+  ScreenThird: {
+    screen: ThirdComponent,
+  }
+});
+//
+// export default class HomeTab extends Component{
+//   render() {
+//     return (
+//       <Navigator />
+//     );
+//   }
+// }
 
 export default class HomeTab extends Component{
   static navigationOptions = {
@@ -14,15 +43,11 @@ export default class HomeTab extends Component{
     header: { visible:false },
     title: 'Home',
     headerMode: 'none',
-    header: null
+    header: () => null
   };
   render() {
     return(
-        <Container>
-          <Content>
-            <Text>This Is HomeTab Screen</Text>
-          </Content>
-        </Container>
+            <Navigator />
     )
   }
 }

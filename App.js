@@ -14,23 +14,23 @@ import {
 } from 'react-native';
 
 import { Container, Content, Icon, Header, Body } from 'native-base'
-import { createDrawerNavigator, StackNavigator, DrawerItems, SafeAreaView } from 'react-navigation'
+import { createDrawerNavigator, StackNavigator, createStackNavigator, DrawerItems, SafeAreaView } from 'react-navigation'
 
-// import Main from './src/screens/Main';
-// const Navigator = createStackNavigator({
-//   Main: {
-//     screen: Main
-//   }
-// })
+import Main from './src/screens/Main';
+const Navigator = createStackNavigator({
+  Main: {
+    screen: Main
+  }
+})
 /*============================================================================*/
 //example 1
-// export default class App extends Component{
-//   render() {
-//     return (
-//       <Navigator />
-//     );
-//   }
-// }
+export default class App extends Component{
+  render() {
+    return (
+      <Navigator />
+    );
+  }
+}
 /*============================================================================*/
 //example 2
 // import MainComponent from './src/screens/components/MainComponent';
@@ -92,64 +92,64 @@ import { Home, Info, Setting, Cloud } from './ScreenNames';
 //   }
 // }
 
-const CustomDrawerContentComponent = (props) => (
-  <Container>
-    <Header style={styles.drawerHeader}>
-      <Body>
-        <Image
-          style={styles.drawerImage}
-          source={require('./src/images/Unsure-Programmer-Logo.png')} />
-      </Body>
-    </Header>
-    <Content>
-      <DrawerItems {...props} />
-    </Content>
-  </Container>
-);
-
-const MyApp = createDrawerNavigator({
-  // For each screen that you can navigate to, create a new entry like this:
-    Home: {
-      screen: HomeComponent,
-    },
-    Setting: {
-      screen: SettingComponent
-    }
-  },
-    {
-      initialRouteName: 'Home',
-      drawerPosition: 'left',
-      contentComponent: CustomDrawerContentComponent,
-      drawerOpenRoute: 'DrawerOpen',
-      drawerCloseRoute: 'DrawerClose',
-      drawerToggleRoute: 'DrawerToggle'
-    });
-
-/*============================================================================*/
-//example 1
-export default class App extends Component{
-  render() {
-    return (
-      <MyApp />
-    );
-  }
-}
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  drawerHeader: {
-    height: 200,
-    backgroundColor: 'white'
-  },
-  drawerImage: {
-    height: 150,
-    width: 150,
-    borderRadius: 75
-  }
-
-})
+// const CustomDrawerContentComponent = (props) => (
+//   <Container>
+//     <Header style={styles.drawerHeader}>
+//       <Body>
+//         <Image
+//           style={styles.drawerImage}
+//           source={require('./src/images/Unsure-Programmer-Logo.png')} />
+//       </Body>
+//     </Header>
+//     <Content>
+//       <DrawerItems {...props} />
+//     </Content>
+//   </Container>
+// );
+//
+// const MyApp = createDrawerNavigator({
+//   // For each screen that you can navigate to, create a new entry like this:
+//     Home: {
+//       screen: HomeComponent,
+//     },
+//     Setting: {
+//       screen: SettingComponent
+//     }
+//   },
+//     {
+//       initialRouteName: 'Home',
+//       drawerPosition: 'left',
+//       contentComponent: CustomDrawerContentComponent,
+//       drawerOpenRoute: 'DrawerOpen',
+//       drawerCloseRoute: 'DrawerClose',
+//       drawerToggleRoute: 'DrawerToggle'
+//     });
+//
+// /*============================================================================*/
+// //example 1
+// export default class App extends Component{
+//   render() {
+//     return (
+//       <MyApp />
+//     );
+//   }
+// }
+//
+//
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+//   drawerHeader: {
+//     height: 200,
+//     backgroundColor: 'white'
+//   },
+//   drawerImage: {
+//     height: 150,
+//     width: 150,
+//     borderRadius: 75
+//   }
+//
+// })
