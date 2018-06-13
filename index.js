@@ -8,6 +8,7 @@ https://docs.nativebase.io/docs/GetStarted.html
 https://flatuicolors.com/palette/defo
 https://reactnavigation.org/docs/en/getting-started.html
 https://ionicframework.com/docs/ionicons/
+https://medium.com/@kevinle/comprehensive-routing-and-navigation-in-react-native-made-easy-6383e6cdc293
 */
 
 import React, { Component } from 'react';
