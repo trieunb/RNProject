@@ -20,16 +20,11 @@ const CustomDrawerContentComponent = (props) => (
   <Container>
     <Header style={styles.drawerHeader}>
       <Body style={styles.bodyContainer}>
-        {/* <Left> */}
           <Image
             style={styles.drawerImage}
             source={require('../../images/Unsure-Programmer-Logo.png')} />
           <Text style={styles.title}>Nguyen Ba Trieu</Text>
-        {/* </Left> */}
       </Body>
-        {/* <Image
-          style={styles.drawerImage}
-          source={require('../../images/Unsure-Programmer-Logo.png')} /> */}
     </Header>
     <Content>
       <DrawerItems {...props} />

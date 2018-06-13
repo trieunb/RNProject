@@ -12,7 +12,7 @@ import { Icon, Button, Container, Header, Content, Left } from 'native-base'
 //custom components imports
 import HeaderComponent from './HeaderComponent'
 
-class CloudComponent extends Component {
+class LoginComponent extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "Home",
     // headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
@@ -53,7 +53,7 @@ class CloudComponent extends Component {
 
 }
 
-export default CloudComponent;
+export default LoginComponent;
 
 //
 // const styles = StyleSheet.create({
