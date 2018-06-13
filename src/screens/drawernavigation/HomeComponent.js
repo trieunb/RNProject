@@ -15,13 +15,14 @@ import HeaderComponent from './HeaderComponent'
 class HomeComponent extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "Home",
-    headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
+    // headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
     drawerLabel: 'Home',
     drawerIcon: ({ tintColor }) => (
-      <Image
-        source={require('../../images/home.png')}
-        style={styles.icon}
-      />
+      // <Image
+      //   source={require('../../images/home.png')}
+      //   style={styles.icon}
+      // />
+      <Icon name="md-home"/>
     ),
   })
 
@@ -53,9 +54,9 @@ class HomeComponent extends Component {
 export default HomeComponent;
 
 
-const styles = StyleSheet.create({
-  icon: {
-    width: 24,
-    height: 24,
-  },
-});
+// const styles = StyleSheet.create({
+//   icon: {
+//     width: 24,
+//     height: 24,
+//   },
+// });

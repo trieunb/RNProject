@@ -12,13 +12,13 @@ import HeaderComponent from './HeaderComponent'
 class SettingsComponent extends Component {
     static navigationOptions = ({ navigation }) => ({
         title: "Settings",
-        headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
+        // headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
         drawerIcon:
-            <Image
-                source={require('../../images/settings.png')}
-                style={[styles.icon]}
-            />
-
+            // <Image
+            //     source={require('../../images/settings.png')}
+            //     style={[styles.icon]}
+            // />
+            <Icon name="md-settings"/>
     })
 
     render() {
@@ -44,10 +44,10 @@ class SettingsComponent extends Component {
 }
 
 export default SettingsComponent
-
-const styles = StyleSheet.create({
-    icon: {
-        height: 24,
-        width: 24
-    }
-})
+//
+// const styles = StyleSheet.create({
+//     icon: {
+//         height: 24,
+//         width: 24
+//     }
+// })

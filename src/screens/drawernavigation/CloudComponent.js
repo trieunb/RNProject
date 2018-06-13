@@ -1,45 +1,62 @@
-/*
-author  :   Trieunb
-created :   2018-06-09
-description: Detail Component
-*/
-/*============================================================================*/
-//import library
-import React, { Component } from 'react';
-import { Text, View, Button, TouchableHighlight } from 'react-native';
-/*============================================================================*/
-//export component
-export default class CloudComponent extends Component{
-  static navigationOptions = ({ navigation }) => {
-  };
+import React, { Component } from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image
+} from "react-native";
+
+//library imports
+import { Icon, Button, Container, Header, Content, Left } from 'native-base'
+
+//custom components imports
+import HeaderComponent from './HeaderComponent'
+
+class CloudComponent extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: "Home",
+    // headerLeft: <Icon name="ios-menu" style={{ paddingLeft: 10 }} onPress={() => navigation.navigate('DrawerOpen')} />,
+    drawerLabel: 'Clund',
+    drawerIcon: ({ tintColor }) => (
+      // <Image
+      //   source={require('../../images/home.png')}
+      //   style={styles.icon}
+      // />
+      <Icon name="md-cloud-outline"/>
+    ),
+    header: () => null
+  })
+
   render() {
-    return(
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: '#1abc9c',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-        <Text
-          style={{fontSize: 20, color: 'white', fontWeight: 'bold'}}
-          >
-            This is Cloud screen
-        </Text>
-        <TouchableHighlight
-          style={{
-            margin: 20,
-            width: 200,
-            height: 45,
-            backgroundColor: '#8e44ad',
-            padding: 10,
-            alignItems: 'center'
-        }}
-        onPress={() => navigation.navigate.goBack()}
-        >
-          <Icon name="menu" />
-        </TouchableHighlight>
-      </View>
-    );
+    return (
+
+      <Container>
+
+        <HeaderComponent title="Cloud" drawerOpen={() => this.props.navigation.navigate('DrawerOpen')} />
+        {/* <HeaderComponent title="Home" navigate={this.props.navigation.navigate} /> */}
+        {/* <HeaderComponent {..this.props} /> */}
+
+        <Content
+          contentContainerStyle={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 10 }}>
+          <Button
+            onPress={() => this.props.navigation.navigate('Cloud')} full>
+            <Text style={{ color: 'white' }}>Go To Settings Screen</Text>
+          </Button>
+        </Content>
+
+      </Container>
+
+    )
   }
+
 }
+
+export default CloudComponent;
+
+//
+// const styles = StyleSheet.create({
+//   icon: {
+//     width: 24,
+//     height: 24,
+//   },
+// });

@@ -13,7 +13,6 @@ import { ScreenDetail, ScreenThird } from '../../../ScreenNames';
 export default class MainComponent extends Component{
   static navigationOptions = ({ navigation }) => {
     const params = navigation.state.params || {};
-
     return {
       headerTitle: 'Home',
       headerRight: (
