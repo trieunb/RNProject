@@ -9,32 +9,43 @@ import React, { Component } from 'react';
 import {
   StyleSheet, View, Text, TextInput, TouchableOpacity
 } from 'react-native';
+import { NavigationActions } from 'react-navigation';
 /*============================================================================*/
 //export class FormLogin
 export default class FormLogin extends Component{
   render() {
+    // const resetAction = NavigationActions.reset({
+    //     routeName: 'DrawerNavigator',
+    //     params: {},
+    //     actions: [
+    //         NavigationActions.navigate({routeName: 'Login'})
+    //     ]
+    // });
+    const { navigation } = this.props;
     return(
       <View style={styles.container}>
-          <TextInput
-            style={styles.input}
-            placeholder="UserName"
-            placeholderTextColor="rgba(255,255,255,0.8)"
-            returnKeyType="next"
-            autoCapitalize="none"
-            autoCorrect={false}
-            onSubmitEditing={() => this.passwordInput.focus()}
-          />
-          <TextInput
-            style={styles.input}
-            placeholder="Password"
-            placeholderTextColor="rgba(255,255,255,0.8)"
-            returnKeyType="go"
-            secureTextEntry={true}
-            ref={(input) => this.passwordInput = input}
-          />
-          <TouchableOpacity style={styles.btnLogin}>
-            <Text style={styles.btnText}>LOGIN</Text>
-          </TouchableOpacity>
+        <TextInput
+          style={styles.input}
+          placeholder="UserName"
+          placeholderTextColor="rgba(255,255,255,0.8)"
+          returnKeyType="next"
+          autoCapitalize="none"
+          autoCorrect={false}
+          onSubmitEditing={() => this.passwordInput.focus()}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Password"
+          placeholderTextColor="rgba(255,255,255,0.8)"
+          returnKeyType="go"
+          secureTextEntry={true}
+          ref={(input) => this.passwordInput = input}
+        />
+        <TouchableOpacity style={styles.btnLogin}
+            onPress={() => {this.props.path.navigate('DrawerNavigator')}}
+          >
+          <Text style={styles.btnText}>LOGIN</Text>
+        </TouchableOpacity>
       </View>
     )
   }

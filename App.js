@@ -87,7 +87,17 @@ import { createDrawerNavigator, StackNavigator, createStackNavigator, DrawerItem
 //   }
 // }
 
-import MyApp from './src/screens/drawernavigation/DrawerNavigator';
+import DrawerNavigator from './src/screens/drawernavigation/DrawerNavigator';
+import Login from './src/screens/login/Login';
+
+const MyApp = createStackNavigator({
+  Login: {screen: Login},
+  DrawerNavigator: {screen: DrawerNavigator},
+},{
+  navigationOptions: {
+    header: () => null
+  }
+});
 
 // /*============================================================================*/
 // //example 1
